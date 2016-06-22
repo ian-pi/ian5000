@@ -19,7 +19,6 @@ use Mix.Config
 # Or configure a 3rd-party app:
 #
      config :logger, level: :info
-     config :marvin, slack_token: "xoxb-51886361457-dwfjWgRgGjveAA7L9yqRSTjd"
      config :marvin, bots: [Ian5000]
 #
 
@@ -30,3 +29,4 @@ use Mix.Config
 # here (which is why it is important to import them last).
 #
 #     import_config "#{Mix.env}.exs"
+config :marvin, slack_token: System.get_env("SLACK_API_TOKEN")
